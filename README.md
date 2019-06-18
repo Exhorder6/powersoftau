@@ -4,15 +4,33 @@ This is a [multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-p
 
 This protocol is described in a [forthcoming paper](https://eprint.iacr.org/2017/1050). It produces parameters for an adaptation of [Jens Groth's 2016 pairing-based proving system](https://eprint.iacr.org/2016/260) using the [BLS12-381](https://github.com/ebfull/pairing/tree/master/src/bls12_381) elliptic curve construction. The security proof relies on a randomness beacon being applied at the end of the ceremony.
 
+This is MPC phase 1. In [MPC phase 2](mpc-readme.md) we will generate the left parameters.
 ## Instructions
+Contact **jiangyuanshu@tron.network** to schedule a time to participate. You'll need the latest (stable) [Rust compiler](https://www.rust-lang.org/) to participate using this code. If you've been asked to participate and it's your turn, you were sent a `challenge` file.
 
-If you've been asked to participate, you were sent a `challenge` file. Put that in the current directory and use your [Rust toolchain](https://www.rust-lang.org/en-US/) to execute the computation:
+1.Download and install IM tool [keybase](https://keybase.io/). if you don't have an account, create it first. you can use tool to send file back to tron foundation. The TronFoundation's keybase account is `tron_brown`.
+If you have questions about this ceremony, contact with us via keybase directly.
+
+2.if you are running on macOS, Linux, or another Unix-like OS(windows are not tested), download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.
+                                                            
+```
+curl https://sh.rustup.rs -sSf | sh
+```
+
+3.Get the source code of project sapling-mpc:
+
+```
+git clone https://github.com/ebfull/powersoftau
+```
+
+4.Put file `challenge` in the powersoftau directory and use your [Rust toolchain](https://www.rust-lang.org/en-US/) to execute the computation:
 
 ```
 cargo run --release --bin compute
 ```
+You may be asked to input some random text in this process, and it could take an hour or so. Memory usage is about 2.5 ~ 3 GB. When it's finished, it will place a `response` file in the current directory. That's what you send back with keybase. It will also print a hash of the `response` file it produced. You need to write this hash down (or post it publicly) so that you and others can confirm that your contribution exists in the final transcript of the ceremony.
 
-The process could take an hour or so. When it's finished, it will place a `response` file in the current directory. That's what you send back. It will also print a hash of the `response` file it produced. You need to write this hash down (or post it publicly) so that you and others can confirm that your contribution exists in the final transcript of the ceremony.
+5.You are expected to send `response` file back to us via keybase. We will verify this file and generate the `new_challenge` file that can be used by next participant，and then will upload this file to aliyun cloud and publish response_hash on [github wiki]().
 
 ## Recommendations
 
