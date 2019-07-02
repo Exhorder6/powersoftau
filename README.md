@@ -20,7 +20,7 @@ curl https://sh.rustup.rs -sSf | sh
 3.Get the source code of project sapling-mpc:
 
 ```
-git clone https://github.com/ebfull/powersoftau
+git clone https://github.com/tronprotocol/powersoftau
 ```
 
 4.Put file `challenge` in the powersoftau directory and use your [Rust toolchain](https://www.rust-lang.org/en-US/) to execute the computation:
