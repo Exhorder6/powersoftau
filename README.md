@@ -11,17 +11,19 @@ Contact **jiangyuanshu@tron.network** to schedule a time to participate. You'll 
 1.Download and install IM tool [keybase](https://keybase.io/). if you don't have an account, create it first. you can use tool to send file back to tron foundation. The TronFoundation's keybase account is `tron_brown`.
 If you have questions about this ceremony, contact with us via keybase directly.
 
-2.if you are running on macOS, Linux, or another Unix-like OS(windows are not tested), download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.
+2.if you are running on macOS, Linux, or another Unix-like OS, download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.
                                                             
 ```
 curl https://sh.rustup.rs -sSf | sh
 ```
+If you are running on windows, refer to [rust](https://www.rust-lang.org/learn/get-started) homepage for installation.
 
 3.Get the source code of project sapling-mpc:
 
 ```
 git clone https://github.com/tronprotocol/powersoftau
 ```
+if git not installed, please refer to [git](https://git-scm.com/downloads) first.
 
 4.Put file `challenge` in the powersoftau directory and use your [Rust toolchain](https://www.rust-lang.org/en-US/) to execute the computation:
 
